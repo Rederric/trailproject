@@ -9,6 +9,10 @@ class ProductListView(ModelViewSet):
     serializer_class=ProductSerializer
     queryset=Product.objects.all()
     
+class TestingListView(ModelViewSet):
+    queryset=Testing.objects.all()
+    serializer_class=TestingSerializer
+    
 # class ProductListView(generics.ListCreateAPIView):
 #     serializer_class=ProductSerializer
 #     queryset=Product.objects.all()
@@ -23,9 +27,4 @@ class ProductListView(ModelViewSet):
     
 # class TestingDetailView(generics.RetrieveUpdateDestroyAPIView):
 #     serializer_class=TestingSerializer
-#     queryset=Testing.objects.all()
-
-class TestingListView(ModelViewSet):
-    queryset=Testing.objects.all()
-    serializer_class=TestingSerializer
-    
+#     queryset=Testing.objects.all()    
