@@ -22,6 +22,7 @@ class ProductListView(ModelViewSet):
     queryset=Product.objects.all()
     
 class TestingListView(ModelViewSet):
+    permission_classes=[Check]
     queryset=Testing.objects.all()
     serializer_class=TestingSerializer
     
